@@ -17,3 +17,8 @@ $password='theSecret'
 #  Location of the isoFile
 #
 $isoFile='..\ISOs\Windows10_InsiderPreview_Client_x64_en-us_19035.iso'
+
+#
+#  Path of shared folder
+#
+$sharedFolder = "$pwd\sharedFolder"
