@@ -13,6 +13,7 @@ $vmPath="$home\VirtualBox VMs\$vmName"
 #  Default user name is vboxuser
 #
 $userName='tq84'
+$fullUserName='Tee Queue Eighty-Four'
 
 #
 #  Default password is changeme
