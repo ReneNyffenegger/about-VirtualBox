@@ -26,6 +26,11 @@ $password='theSecret'
 $isoFile='..\ISOs\Windows10_InsiderPreview_Client_x64_en-us_19035.iso'
 
 #
+#  Size of harddisk in megabytes:
+#
+$hdSizeMb = 65536
+
+#
 #  Path of shared folder
 #
 $sharedFolder = "$pwd\sharedFolder"
