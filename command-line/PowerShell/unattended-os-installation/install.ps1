@@ -5,4 +5,4 @@ VBoxManage unattended install $vmName      `
   --full-user-name=$fullUserName           `
   --install-additions                      `
   --time-zone=CET                          `
-  --post-install-command='VBoxControl guestproperty set installation_finished y'
+# --post-install-command='VBoxControl guestproperty set installation_finished y'
