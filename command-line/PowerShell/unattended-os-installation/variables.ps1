@@ -1,4 +1,4 @@
- #
+#
 # Add Virtual Box bin-path to PATH environment variable if necessary:
 #
   if ( (get-command VBoxManage.exe -errorAction silentlyContinue) -eq $null) {
@@ -49,11 +49,16 @@
   $password='theSecret'
 
 #
-# Some sizes
+# Some Memory sizes
 #
   $hdSizeMb  = 65536
   $memSizeMb = 16384
-  $vram      =   128
+  $vramMb    =   128 # Must be in range 0 … 256 (Mb) - GUI allows max of 128 only.
+
+#
+# Number of CPUs
+#
+  $nofCPUs  =     4
 
 #
 # Path of shared folder

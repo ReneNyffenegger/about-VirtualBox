@@ -1,1 +1,1 @@
-VBoxManage modifyvm $vmName --memory $memSizeMb --vram $vram
+VBoxManage modifyvm $vmName --memory $memSizeMb --vram $vramMb

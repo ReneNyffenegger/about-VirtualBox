@@ -6,12 +6,13 @@
 . .\create-sata.ps1
 . .\create-ide.ps1
 . .\enable-apic.ps1
-#  . .\enable-acpi.ps1    # 
+# .\enable-acpi.ps1
 . .\boot-device-order.ps1
 . .\allocate-memory.ps1
 . .\prepare-shared-folder.ps1
 . .\clipboard-mode.ps1
 . .\vboxsvga.ps1
+. .\cpus.ps1
 . .\install.ps1
 . .\list-vms.ps1
 . .\remove-menues.ps1
