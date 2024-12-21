@@ -30,8 +30,9 @@
 
 #
 # VBoxManage list ostypes
+#    2024-12-21: osType now detected in detect.ps1
 #
-  $osType='Windows10_64'
+# $osType='Windows10_64'
 # $osType='Ubuntu_64'
 # $osType='Debian_64'
 
