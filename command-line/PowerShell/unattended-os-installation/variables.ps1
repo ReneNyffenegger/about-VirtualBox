@@ -7,34 +7,24 @@
 
 
 # $vmName  = 'Win10Preview'
-  $vmName  = 'Windows10'
+# $vmName  = 'Windows10'
+  $vmName  = 'Windows11'
 # $vmName  = 'Ubuntu-desktop-22.04.1'
 # $vmName  = 'Debian-11.6.0'
 
 #
 # Location of installation ISO file:
 #
-# $isoFile = "$home\VirtualBox\ISOs\Windows10_InsiderPreview_Client_x64_en-us_19035.iso"
-  $isoFile = "$home\VirtualBox\ISOs\Windows-10.iso"
-# $isoFile = "$home\VirtualBox\ISOs\ubuntu-22.04.1-desktop-amd64.iso"
-# $isoFile = "$home\VirtualBox\ISOs\debian-11.6.0-amd64-netinst.iso"
+# $isoFile = "$home\ISOs\Windows10_InsiderPreview_Client_x64_en-us_19035.iso"
+# $isoFile = "$home\ISOs\Windows-10.iso"
+  $isoFile = "$home\ISOs\Win11_24H2_English_x64.iso"
+# $isoFile = "$home\ISOs\ubuntu-22.04.1-desktop-amd64.iso"
+# $isoFile = "$home\ISOs\debian-11.6.0-amd64-netinst.iso"
 
   if (-not (test-path $isoFile)) {
     "$isoFile does not exist"
      return
   }
-
-#
-# VBoxManage.exe unattended detect --iso=$isoFile
-#
-
-#
-# VBoxManage list ostypes
-#    2024-12-21: osType now detected in detect.ps1
-#
-# $osType='Windows10_64'
-# $osType='Ubuntu_64'
-# $osType='Debian_64'
 
   $vmPath="$home\VirtualBox VMs\$vmName"
 
@@ -57,9 +47,9 @@
   $vramMb    =   128 # Must be in range 0 … 256 (Mb) - GUI allows max of 128 only.
 
 #
-# Number of CPUs
+# Number of CPUs:
 #
-  $nofCPUs  =     4
+  $nofCPUs  = $([System.Environment]::ProcessorCount / 2)
 
 #
 # Path of shared folder

@@ -4,7 +4,6 @@ if (VBoxManage list vms | select-string \b${vmName}\b) {
   write-host "$vmName is registered"
   VBoxManage controlvm    $vmName poweroff
   VBoxManage unregistervm $vmName --delete
-
 }
 else {
   write-host "$vmName is not registered"
