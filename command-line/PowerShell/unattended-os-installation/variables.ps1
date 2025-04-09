@@ -43,7 +43,7 @@
 # Some Memory sizes
 #
   $hdSizeMb  = 65536
-  $memSizeMb = 16384
+  $memSizeMb = (get-cimInstance win32_physicalMemory | measure-object -property capacity -sum).sum / 1mb / 2 # Half of the total memory
   $vramMb    =   128 # Must be in range 0 … 256 (Mb) - GUI allows max of 128 only.
 
 #
